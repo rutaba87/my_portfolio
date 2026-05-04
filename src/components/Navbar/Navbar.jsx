@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { navLinks } from "../../data";
-import { HiMenu, HiX } from "react-icons/hi";
+// import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -54,7 +54,7 @@ export default function Navbar() {
         {/* Resume CTA */}
         <a
           href="/resume.pdf"
-          target= "blank"
+          target="blank"
           className="hidden sm:inline-block"
           style={{
             fontFamily: "var(--font-mono)",
@@ -73,23 +73,23 @@ export default function Navbar() {
         </a>
 
         {/* Hamburger — mobile only - USING REACT ICONS */}
-        <button
+        {/* <button
           className="sm:hidden flex items-center justify-center bg-transparent border-none p-2 cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
           style={{ background: "transparent" }}
-        >
-          {/* Alternative using react-icons instead of lucide-react - uncomment below and comment above */}
-          {menuOpen ? (
+        > */}
+        {/* Alternative using react-icons instead of lucide-react - uncomment below and comment above */}
+        {/* {menuOpen ? (
             <HiX size={24} style={{ color: "black" }} />
           ) : (
             <HiMenu size={24} style={{ color: "black" }} />
           )}
-        </button>
+        </button> */}
       </nav>
 
       {/* Mobile overlay menu */}
-      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+      {/* <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         {menuOpen && (
           <HiX
             size={24}
@@ -130,7 +130,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </>
   );
 }
