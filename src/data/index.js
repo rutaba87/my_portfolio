@@ -64,7 +64,7 @@ export const socials = [
     label: "GitHub",
     href: "https://github.com/rutaba87",
   },
-  { label: "LinkedIn", href: "www.linkedin.com/in/rutaba-shamshad-5b897223b" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/rutaba-shamshad-5b897223b" },
   { label: "resume.pdf", href: "/resume.pdf" },
 ];
 
