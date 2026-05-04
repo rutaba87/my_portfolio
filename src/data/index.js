@@ -1,5 +1,6 @@
 import img1 from "../assets/Willingrow_social_thumbnail.png";
 import img2 from "../assets/coming_soon.png";
+import img3 from "../assets/new_project.png";
 export const navLinks = [
   { label: "Work", href: "#projects" },
   { label: "About", href: "#about" },
@@ -44,7 +45,7 @@ export const projects = [
     live: "#",
     github: "#",
     featured: false,
-    img: img2,
+    img: img3,
   },
   {
     id: 3,
