@@ -1,0 +1,238 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent: #1d9e75;
+  --accent-light: #e1f5ee;
+  --accent-dark: #0f6e56;
+  --bg: #f5f5f0;
+  --bg-card: #ffffff;
+  --text-primary: #0d0d0d;
+  --text-secondary: #6b6b65;
+  --text-tertiary: #9b9b93;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.14);
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Section shared ── */
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ── Skill pills ── */
+.pill {
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 99px;
+  border: 0.5px solid var(--border-strong);
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+.pill-strong {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  border-color: #9fe1cb;
+  font-weight: 500;
+}
+
+/* ── Project card ── */
+.proj-card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.proj-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+.proj-thumb {
+  height: 110px;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.5px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.proj-thumb-lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image: linear-gradient(var(--accent-dark) 1px, transparent 1px);
+  background-size: 100% 18px;
+}
+.proj-thumb-inner {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-dark);
+  opacity: 0.5;
+  position: relative;
+  z-index: 1;
+}
+.proj-tag {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: var(--bg);
+  color: var(--text-tertiary);
+  border: 0.5px solid var(--border);
+  margin: 2px 8px;
+}
+
+/* ── About highlight ── */
+.about-highlight {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ── About link pills ── */
+.about-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 0.5px solid var(--border-strong);
+  color: var(--text-secondary);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.about-link:hover {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  border-color: #9fe1cb;
+}
+
+/* ── Contact inputs ── */
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 0.5px solid var(--border-strong);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: var(--accent);
+}
+.contact-textarea {
+  resize: vertical;
+  min-height: 90px;
+  margin-bottom: 10px;
+}
+
+/* ── Hero grid bg ── */
+.hero-grid-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  opacity: 0.04;
+  background-image:
+    linear-gradient(var(--text-primary) 1px, transparent 1px),
+    linear-gradient(90deg, var(--text-primary) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+/* ── Nav link hover ── */
+.nav-link {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+/* ── Mobile menu ── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: var(--bg);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.mobile-menu.open {
+  display: flex;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .featured-card {
+    grid-template-columns: 1fr !important;
+  }
+  .featured-thumb {
+    height: 110px !important;
+    border-right: none !important;
+    border-bottom: 0.5px solid var(--border) !important;
+  }
+  .contact-row {
+    grid-template-columns: 1fr !important;
+  }
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .avatar-box {
+    display: none;
+  }
+  .hero-grid-bg {
+    width: 120px !important;
+  }
+}
