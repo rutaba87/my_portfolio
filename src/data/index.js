@@ -50,8 +50,8 @@ export const projects = [
       "datefns",
       "uuidv4",
     ],
-    live: "https://my-portfolio-1kyw.vercel.app/",
-    github: "https://github.com/rutaba87/my_portfolio",
+    live: "https://note-space-six.vercel.app/",
+    github: "https://github.com/rutaba87/note-space",
     featured: false,
     img: img3,
   },
@@ -72,7 +72,10 @@ export const socials = [
     label: "GitHub",
     href: "https://github.com/rutaba87",
   },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/rutaba-shamshad-5b897223b" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/rutaba-shamshad-5b897223b",
+  },
   { label: "resume.pdf", href: "/resume.pdf" },
 ];
 
