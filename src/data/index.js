@@ -1,5 +1,5 @@
 import img1 from "../assets/Willingrow_social_thumbnail.png";
-import img2 from "../assets/coming_soon.png";
+import img2 from "../assets/snip-url.png";
 import img3 from "../assets/new_project.png";
 export const navLinks = [
   { label: "Work", href: "#projects" },
@@ -9,21 +9,29 @@ export const navLinks = [
 
 export const skillsCore = [
   "React",
-  "Responsive Design",
-  "CSS",
-  "Tailwind CSS",
+  "Next.js (App Router)",
   "JavaScript (ES6+)",
+  "HTML5 & CSS3",
+  "Tailwind CSS",
+  "CSS Modules",
   "Bootstrap",
+  "Redux Toolkit",
+  "REST APIs & Axios",
+  "React Router",
+  "Git and GitHub",
+  "Figma",
+  "Responsive Design",
 ];
 
 export const skillsSupporting = [
-  "REST APIs",
-  "React Router",
-  "Context API",
-  "Git / GitHub",
-  "Figma",
-  "Redux",
-  "Mongo DB",
+  "Node.js & Express",
+  "MongoDB & Mongoose",
+  "REST API design",
+  "marked.js & DOMPurify",
+  "date-fns & uuidv4",
+  "nanoid",
+  "Vercel",
+  "Postman"
 ];
 
 export const projects = [
@@ -57,11 +65,21 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Project Title",
-    desc: "Brief description of what the project does, who its for, and your role. Update with your real project.",
-    tags: ["React", "API"],
-    live: "#",
-    github: "#",
+    title: "Snip URL",
+    desc: "A full-stack URL shortener with click tracking, real-time stats, and link management. Built the complete frontend in Next.js with server and client components, CSS Modules, and a Node.js/Express/MongoDB backend deployed on Vercel.",
+    tags: [
+      "Next.js",
+      "React",
+      "CSS Modules",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "REST API",
+      "Vercel",
+    ],
+    live: "https://snip-url-omega.vercel.app/",
+    github: "https://github.com/rutaba87/snip-url-frontend",
     featured: false,
     img: img2,
   },
